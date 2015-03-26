@@ -1,4 +1,4 @@
-/* C code produced by gperf version 3.0.3 */
+/* C code produced by gperf version 3.0.4 */
 /* Command-line: gperf -gptoC -Nlu_elt keywords  */
 /* Computed positions: -k'1,$' */
 
@@ -57,12 +57,13 @@ enum element {
   el_sha1,
   el_model,
   el_format,
-  el_redirect
+  el_redirect,
+  el_dbname
 };
-#line 31 "keywords"
+#line 32 "keywords"
 struct eltmap { char *name; enum element t; };
 
-#define TOTAL_KEYWORDS 26
+#define TOTAL_KEYWORDS 27
 #define MIN_WORD_LENGTH 2
 #define MAX_WORD_LENGTH 12
 #define MIN_HASH_VALUE 4
@@ -87,14 +88,14 @@ hash (str, len)
       40, 40, 40, 40, 40, 40, 40, 40, 40, 40,
       40, 40, 40, 40, 40, 40, 40, 40, 40, 40,
       40, 40, 40, 40, 40, 40, 40, 40, 40, 40,
-      40, 40, 40, 40, 40, 40, 40, 40, 40, 30,
+      40, 40, 40, 40, 40, 40, 40, 40, 40, 23,
       40, 40, 40, 40, 40, 40, 40, 40, 40, 40,
       40, 40, 40, 40, 40, 40, 40, 40, 40, 40,
       40, 40, 40, 40, 40, 40, 40, 40, 40, 40,
       40, 40, 40, 40, 40, 40, 40, 40, 40, 40,
-      40, 40, 40, 40, 40, 40, 40, 40,  3,  5,
-      15,  0,  0, 25, 40, 15, 40, 40,  5,  5,
-      15, 15, 10, 40,  0,  5,  0, 10, 40, 40,
+      40, 40, 40, 40, 40, 40, 40, 40, 30,  5,
+       0,  0,  5, 20, 40, 25, 40, 40,  5,  5,
+      15, 20, 10, 40,  0,  5,  0, 20, 40, 40,
       40, 40, 40, 40, 40, 40, 40, 40, 40, 40,
       40, 40, 40, 40, 40, 40, 40, 40, 40, 40,
       40, 40, 40, 40, 40, 40, 40, 40, 40, 40,
@@ -115,7 +116,7 @@ hash (str, len)
 
 #ifdef __GNUC__
 __inline
-#ifdef __GNUC_STDC_INLINE__
+#if defined __GNUC_STDC_INLINE__ || defined __GNUC_GNU_INLINE__
 __attribute__ ((__gnu_inline__))
 #endif
 #endif
@@ -127,63 +128,66 @@ lu_elt (str, len)
   static const struct eltmap wordlist[] =
     {
       {""}, {""}, {""}, {""},
-#line 52 "keywords"
+#line 53 "keywords"
       {"text",         el_text},
-#line 42 "keywords"
+#line 43 "keywords"
       {"title",        el_title},
-#line 57 "keywords"
-      {"format",       el_format},
-#line 36 "keywords"
-      {"base",         el_base},
-#line 58 "keywords"
-      {"redirect",     el_redirect},
-#line 38 "keywords"
-      {"case",         el_case},
-#line 50 "keywords"
-      {"minor",        el_minor},
+#line 60 "keywords"
+      {"dbname",		  el_dbname},
       {""},
+#line 59 "keywords"
+      {"redirect",     el_redirect},
+#line 39 "keywords"
+      {"case",         el_case},
 #line 51 "keywords"
+      {"minor",        el_minor},
+#line 58 "keywords"
+      {"format",       el_format},
+#line 52 "keywords"
       {"comment",      el_comment},
-#line 35 "keywords"
+#line 36 "keywords"
       {"sitename",     el_sitename},
-#line 41 "keywords"
+#line 42 "keywords"
       {"page",         el_page},
-#line 56 "keywords"
+#line 57 "keywords"
       {"model",        el_model},
-#line 47 "keywords"
-      {"contributor",  el_contributor},
-#line 44 "keywords"
-      {"restrictions", el_restrictions},
 #line 48 "keywords"
-      {"username",     el_username},
-#line 46 "keywords"
+      {"contributor",  el_contributor},
+#line 45 "keywords"
+      {"restrictions", el_restrictions},
+#line 55 "keywords"
+      {"parentid",     el_parentid},
+#line 47 "keywords"
       {"timestamp",    el_timestamp},
       {""}, {""},
-#line 53 "keywords"
+#line 54 "keywords"
       {"ns",           el_ns},
-#line 45 "keywords"
+#line 46 "keywords"
       {"revision",     el_revision},
-#line 40 "keywords"
+#line 41 "keywords"
       {"namespace",    el_namespace},
       {""}, {""},
+#line 44 "keywords"
+      {"id",           el_id},
 #line 49 "keywords"
-      {"ip",           el_ip},
-#line 34 "keywords"
-      {"siteinfo",     el_siteinfo},
-#line 33 "keywords"
-      {"mediawiki",    el_mediawiki},
-#line 39 "keywords"
+      {"username",     el_username},
+#line 38 "keywords"
+      {"generator",    el_generator},
+#line 40 "keywords"
       {"namespaces",   el_namespaces},
       {""},
-#line 43 "keywords"
-      {"id",           el_id},
-#line 54 "keywords"
-      {"parentid",     el_parentid},
+#line 56 "keywords"
+      {"sha1",         el_sha1},
+#line 35 "keywords"
+      {"siteinfo",     el_siteinfo},
 #line 37 "keywords"
-      {"generator",    el_generator},
-      {""}, {""}, {""}, {""},
-#line 55 "keywords"
-      {"sha1",         el_sha1}
+      {"base",         el_base},
+      {""}, {""},
+#line 50 "keywords"
+      {"ip",           el_ip},
+      {""},
+#line 34 "keywords"
+      {"mediawiki",    el_mediawiki}
     };
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)

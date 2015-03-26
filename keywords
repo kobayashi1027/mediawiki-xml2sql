@@ -25,7 +25,8 @@ enum element {
   el_sha1,
   el_model,
   el_format,
-  el_redirect
+  el_redirect,
+  el_dbname
 };
 %}
 struct eltmap { char *name; enum element t; };
@@ -56,3 +57,4 @@ sha1,         el_sha1
 model,        el_model
 format,       el_format
 redirect,     el_redirect
+dbname,       el_dbname
